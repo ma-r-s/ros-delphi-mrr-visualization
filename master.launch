@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
-  <arg name="esr_frame_id" default="esr_1" />
-  <arg name="esr_upside_down" default="false" />
+  <arg name="mrr_frame_id" default="mrr_1" />
+  <arg name="mrr_upside_down" default="false" />
   <arg name="viz_mature_tracks_only" default="false" />
   <arg name="use_socketcan" default="false" />
   <arg name="socketcan_device" default="can0" />
@@ -11,15 +11,15 @@
     <remap from="received_messages" to="can_tx" />
   </node>
 
-  <node pkg="delphi_esr" type="delphi_esr_can" name="delphi_esr_can">
-    <param name="sensor_frame_id" value="$(arg esr_frame_id)"/>
-    <param name="sensor_upside_down" value="$(arg esr_upside_down)"/>
+  <node pkg="delphi_mrr" type="delphi_mrr" name="delphi_mrr">
+    <param name="sensor_frame_id" value="$(arg mrr_frame_id)"/>
+    <param name="sensor_upside_down" value="$(arg mrr_upside_down)"/>
     <!-- removes the noise of new tracks in rviz and only vizualizes the mature tracks --> 
     <param name="viz_mature_tracks_only" value="$(arg viz_mature_tracks_only)"/>
   </node>
 
-  <node pkg="tf" type="static_transform_publisher" name="esr_1" 
-  args="0 0 0 0 0 0 world $(arg esr_frame_id) 100" />
+  <node pkg="tf" type="static_transform_publisher" name="mrr_1" 
+  args="0 0 0 0 0 0 world $(arg mrr_frame_id) 100" />
 
   <node type="rviz" name="rviz" pkg="rviz" args="$(dirname)/default.rviz" />
 </launch>

@@ -54,7 +54,7 @@ Visualization Manager:
         Z: 0
       Plane: XY
       Plane Cell Count: 10
-      Reference Frame: esr_1
+      Reference Frame: mrr_1
       Value: true
     - Class: rviz/TF
       Enabled: true
@@ -66,8 +66,7 @@ Visualization Manager:
       Show Arrows: true
       Show Axes: true
       Show Names: true
-      Tree:
-        {}
+      Tree: {}
       Update Interval: 0
       Value: true
     - Class: rviz/Marker
@@ -75,7 +74,7 @@ Visualization Manager:
       Marker Topic: /as_tx/radar_markers
       Name: Marker
       Namespaces:
-        esr_1: true
+        mrr_1: true
       Queue Size: 20
       Value: true
     - Class: rviz/Axes
@@ -83,13 +82,13 @@ Visualization Manager:
       Length: 1
       Name: Axes
       Radius: 0.10000000149011612
-      Reference Frame: esr_1
+      Reference Frame: mrr_1
       Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: esr_1
+    Fixed Frame: mrr_1
     Frame Rate: 30
   Name: root
   Tools:
@@ -123,7 +122,7 @@ Visualization Manager:
       Name: Current View
       Near Clip Distance: 0.009999999776482582
       Scale: 16.39055633544922
-      Target Frame: esr_1
+      Target Frame: mrr_1
       Value: TopDownOrtho (rviz)
       X: 13.578681945800781
       Y: 2.1086647510528564
